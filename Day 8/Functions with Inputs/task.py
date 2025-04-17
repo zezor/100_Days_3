@@ -13,6 +13,8 @@
 #     print("Isn't the weather nice?")
 #
 # greet_name("Gloria")
+from itertools import count
+
 
 # name = parameter....name of that data being passed to that data
 # Gloria = argument.... data to pass to a function
@@ -47,8 +49,9 @@
 def calculate_love_score(name1, name2):
     true_love = "TRUE LOVE"
     for char in true_love:
-        if char in name1:
+        if char in name1 and name2:
+            char.count()
             print(char)
             print("Yes")
 
-calculate_love_score("GLORIA", "EMMA")
+calculate_love_score("GLORIA", "EMMANUEL")
