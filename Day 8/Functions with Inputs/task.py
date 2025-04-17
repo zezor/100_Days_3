@@ -44,14 +44,14 @@ from itertools import count
 # greet_with( name="Emma", location="Techiman")
 # greet_with( location="Techiman", name="Emma")
 
-
+count1 = 0
 
 def calculate_love_score(name1, name2):
     true_love = "TRUE LOVE"
     for char in true_love:
         if char in name1 and name2:
-            char.count()
-            print(char)
+            count1 += char.count(char)
+            print(f"{char} = {count1}")
             print("Yes")
 
 calculate_love_score("GLORIA", "EMMANUEL")
