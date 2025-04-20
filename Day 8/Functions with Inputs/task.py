@@ -44,14 +44,44 @@ from itertools import count
 # greet_with( name="Emma", location="Techiman")
 # greet_with( location="Techiman", name="Emma")
 
-count1 = 0
+# count1 = 0
+#
+# def calculate_love_score(name1, name2):
+#     true_love = "TRUE LOVE"
+#     for char in true_love:
+#         if char in name1:
+#             count1 += char.count(char)
+#             print(f"{char} = {count1}")
+#         elif char in name2:
+#             count1 += char.count(char)
+#             print(f"{char} = {count1}")
+#
+#         else:
+#             print(char)
+#             count1 = 0
+#
+# calculate_love_score("GLORIA", "EMMANUEL")
 
 def calculate_love_score(name1, name2):
-    true_love = "TRUE LOVE"
-    for char in true_love:
-        if char in name1 and name2:
-            count1 += char.count(char)
-            print(f"{char} = {count1}")
-            print("Yes")
+    combined_names = name1 + name2
+    lower_names = combined_names.lower()
 
-calculate_love_score("GLORIA", "EMMANUEL")
+    t = lower_names.count("t")
+    r = lower_names.count("r")
+    u = lower_names.count("u")
+    e = lower_names.count("e")
+    first_digit = t + r + u + e
+    print(first_digit)
+
+    l = lower_names.count("l")
+    o = lower_names.count("o")
+    v = lower_names.count("v")
+    e = lower_names.count("e")
+    second_digit = l + o + v + e
+    print(second_digit)
+
+
+    score = int(str(first_digit)) + int(str(second_digit))
+    print(score)
+
+calculate_love_score("GLORIA OWUSU AFRIYIE", "EMMANUEL NYAMEKYE NTI")
